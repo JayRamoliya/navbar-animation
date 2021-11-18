@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background: black;
+        }
+
+        .main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ol{
+            list-style: none;
+            display: flex;
+            font-size: 1.2rem;
+        }
+
+        ol li{
+            margin: 0 20px;
+            padding: 10px 20px;
+            position: relative;
+            transition: all 0.2s;
+            transition-delay: 0.2s;
+        }
+
+        ol li a{
+            color: white;
+            text-decoration: none;
+        }
+
+        ol li::before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: white;
+            transition: all 0.2s;
+        }
+
+        ol li:hover::before{
+            bottom: 40px;
+            background: rgb(255, 63, 63);
+        }
+        ol li:hover{
+            background: rgb(255, 63, 63);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <ol>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ol>
+    </div>
+</body>
+</html>
